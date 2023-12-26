@@ -12,7 +12,9 @@ function displayTemperature(response) {
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}mph`;
-  iconElement.innerHTML = response.data.condition.icon;
+  iconElement.innerHTML = `<img src= "${response.data.condition.icon_url}"class="current-temperature-icon"`;
+
+  console.log(response.data.condition.icon_url);
 }
 
 function search(event) {
